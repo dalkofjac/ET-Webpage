@@ -1,0 +1,16 @@
+{
+    "name": "EventTrackerWebApp",
+    "version": "1.0.0",
+    "main": "path/to/main.css",
+    "ignore": [
+        ".jshintrc", "**/*.txt"
+    ],
+    "dependencies": {
+        "jquery": "~2.2.4",
+        "bootstrap": "~3.3.7",
+        "font-awesome": "~4.7.0",
+        "bootswatch": "~3.3.7"
+    },
+    "devDependencies": {
+    }
+}
