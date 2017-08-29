@@ -11,24 +11,19 @@ $(document).ready(function() {
          return false;
     });
     
-    $('#myCarousel').carousel({
-        interval: 40000
+    $('#media').carousel({
+        pause: true,
+        interval: false,
     });
-
-    $('.carousel .item').each(function(){
-        var next = $(this).next();
-        if (!next.length) {
-            next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-
-        if (next.next().length>0) {
- 
-        next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');   
-        }
-        else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
+    
+    var usersName = $("#usersName");
+    var usersEmail = $("#usersEmail");
+    var usersMsg = $("#usersMsg");
+    var submitBtn = $("#submitBtn");
+    
+    submitBtn.on("click", function(){
+       window.alert("Korisnik: " + usersName.val() + ", Email: " + usersEmail.val() + ", Poruka: " + usersMsg.val());
+       return false;
     });
 });
 
